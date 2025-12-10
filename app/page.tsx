@@ -472,7 +472,7 @@ export default function Home() {
                 title="Endubis Finance"
                 version="v2.4.1"
                 type="Lending Protocol"
-                description="A hybrid financial study investigating how blockchyain secured collateral can support fair, affordable fiat lending. YThis project focuses on building resilient fianncial pathway that strengthens local economies and expand credit access for underserved communites"
+                description="A hybrid financial study investigating how blockchain secured collateral can support fair, affordable fiat lending. YThis project focuses on building resilient fianncial pathway that strengthens local economies and expand credit access for underserved communites"
                 stats={[
                   { label: "Total Liquidity", val: "$1.2B" },
                   { label: "Utilization", val: "84%" },
