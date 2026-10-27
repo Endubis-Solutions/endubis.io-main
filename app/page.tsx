@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useScroll, useSpring } from "motion/react";
 import {
-  Atom,
   Binary,
   Network,
   ArrowRight,
@@ -18,6 +18,7 @@ import {
   Terminal,
   Cpu,
   Layers,
+  Building2,
 } from "lucide-react";
 
 // --- UI Components ---
@@ -61,9 +62,14 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center border border-[#D4A54F]/20 bg-[#D4A54F]/5">
-            <Atom className="w-5 h-5 text-[#D4A54F]" />
-          </div>
+          <Image
+            src="/endubis-logo-mark.png"
+            alt="Endubis Labs logo"
+            width={400}
+            height={624}
+            priority
+            className="h-9 w-auto"
+          />
           <span className="text-xl font-bold tracking-tight text-white group-hover:text-[#D4A54F] transition-colors">
             ENDUBIS{" "}
             <span className="font-light text-zinc-500 text-sm">LABS</span>
@@ -81,10 +87,15 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <button className="px-5 py-2 rounded-full border border-[#D4A54F]/30 text-[#D4A54F] text-sm font-medium hover:bg-[#D4A54F] hover:text-black transition-all flex items-center gap-2">
+          <a
+            href="https://github.com/Endubis-Solutions"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-full border border-[#D4A54F]/30 text-[#D4A54F] text-sm font-medium hover:bg-[#D4A54F] hover:text-black transition-all flex items-center gap-2"
+          >
             <Terminal className="w-4 h-4" />
             Github
-          </button>
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -114,6 +125,16 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <a
+              href="https://github.com/Endubis-Solutions"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-lg font-medium text-[#D4A54F] flex items-center gap-2"
+            >
+              <Terminal className="w-4 h-4" />
+              Github
+            </a>
           </div>
         </motion.div>
       )}
@@ -131,6 +152,7 @@ const ResearchSection = ({
   imageComponent,
   align = "left",
   number,
+  paperUrl,
 }) => {
   return (
     <section
@@ -172,10 +194,22 @@ const ResearchSection = ({
               </span>
             ))}
           </div>
-          <button className="group flex items-center gap-2 text-white border-b border-[#D4A54F] pb-1 hover:text-[#D4A54F] transition-colors">
-            Read Technical Paper{" "}
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-          </button>
+          {paperUrl ? (
+            <a
+              href={paperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-white border-b border-[#D4A54F] pb-1 hover:text-[#D4A54F] transition-colors"
+            >
+              Read Technical Paper{" "}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </a>
+          ) : (
+            <button className="group flex items-center gap-2 text-white border-b border-[#D4A54F] pb-1 hover:text-[#D4A54F] transition-colors">
+              Read Technical Paper{" "}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </button>
+          )}
         </motion.div>
         <div
           className={`order-1 ${
@@ -198,8 +232,19 @@ const ProtocolCard = ({
   stats,
   linkUrl,
   linkText,
-}) => (
-  <Link href={linkUrl} className="block h-full">
+  Icon = Box,
+}: {
+  title: string;
+  version: string;
+  type: string;
+  description: string;
+  stats: { label: string; val: string }[];
+  linkUrl: string;
+  linkText: string;
+  Icon?: React.ElementType;
+}) => {
+  const isExternal = linkUrl.startsWith("http");
+  const CardInner = (
     <motion.div
       whileHover={{ y: -10 }}
       className="group relative bg-[#080808] border border-zinc-800 p-8 rounded-2xl overflow-hidden hover:border-[#D4A54F]/50 transition-all duration-300 h-full flex flex-col"
@@ -210,7 +255,7 @@ const ProtocolCard = ({
       <div className="relative z-10 flex flex-col h-full">
         <div className="flex justify-between items-start mb-6">
           <div className="p-3 bg-black border border-zinc-800 rounded-lg group-hover:border-[#D4A54F]/50 transition-colors">
-            <Box className="w-6 h-6 text-[#D4A54F]" />
+            <Icon className="w-6 h-6 text-[#D4A54F]" />
           </div>
           <div className="flex gap-2">
             <span className="text-[10px] font-mono border border-zinc-800 px-2 py-1 rounded text-zinc-500">
@@ -246,8 +291,23 @@ const ProtocolCard = ({
         </div>
       </div>
     </motion.div>
-  </Link>
-);
+  );
+  if (isExternal) {
+    return (
+      <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
+        {CardInner}
+      </a>
+    );
+  }
+  return (
+    <Link
+      href={linkUrl}
+      className="block h-full"
+    >
+      {CardInner}
+    </Link>
+  );
+};
 
 // --- Visual Components ---
 const DynamicsVisual = () => (
@@ -359,10 +419,6 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm text-zinc-400 text-sm font-mono tracking-wide">
-                <span className="w-2 h-2 rounded-full bg-[#D4A54F] animate-pulse"></span>
-                RESEARCH PREVIEW: EPOCH 4
-              </div>
               <h1 className="text-5xl md:text-7xl lg:text-9xl font-light tracking-tighter mb-8">
                 PROVABLE <br />
                 <span className="font-serif italic text-[#D4A54F]">
@@ -378,9 +434,12 @@ export default function Home() {
                 <button className="px-8 py-4 w-full sm:w-auto rounded-full bg-[#D4A54F] text-black font-bold text-lg hover:bg-[#D4A54F]/90 transition-all">
                   About US
                 </button>
-                <button className="px-8 py-4 w-full sm:w-auto rounded-full border border-zinc-700 text-zinc-300 font-medium text-lg hover:border-[#D4A54F] hover:text-[#D4A54F] transition-all flex items-center justify-center gap-2">
+                <a
+                  href="#protocols"
+                  className="px-8 py-4 w-full sm:w-auto rounded-full border border-zinc-700 text-zinc-300 font-medium text-lg hover:border-[#D4A54F] hover:text-[#D4A54F] transition-all flex items-center justify-center gap-2"
+                >
                   View Projects <ChevronRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -428,6 +487,7 @@ export default function Home() {
             description="Analyzing the feasibility, regulatory considerations, and economic potential of introducing stablecoins within the Ethiopian financial ecosystem."
             align="left"
             tags={["Stablecoins", "Digital Payments", "Ethiopia Fintech"]}
+            paperUrl="/papers/implementing-stablecoins-in-ethiopia.html"
             imageComponent={<DynamicsVisual />}
           />
 
@@ -446,7 +506,7 @@ export default function Home() {
         {/* --- PROTOCOLS / IMPLEMENTATIONS GRID (New Links) --- */}
         <section
           id="protocols"
-          className="py-32 px-6 bg-[#080808] border-y border-zinc-900"
+          className="py-32 px-6 bg-[#080808] border-y border-zinc-900 scroll-mt-20"
         >
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -507,6 +567,35 @@ export default function Home() {
                 linkText="Learn More"
               />
             </div>
+            <div className="grid lg:grid-cols-3 gap-8 mt-8">
+              <ProtocolCard
+                title="Endubis Travel Advisory AI"
+                version="v1.0.0"
+                type="AI Concierge"
+                description="An AI-powered travel advisory and concierge for Ethiopia & Kenya. Chat-driven itinerary planning, route, hostel and budget guidance, and seamless booking dispatch via Telegram alerts. Privacy-first — no accounts, no card details in chat, with transcripts auto-deleted 30 days after submission."
+                stats={[
+                  { label: "Coverage", val: "ETH ↔ KEN" },
+                  { label: "Retention", val: "30-day purge" },
+                ]}
+                linkUrl="https://ai.endubis.io"
+                linkText="Launch AI Concierge"
+                Icon={Cpu}
+              />
+
+              <ProtocolCard
+                title="Debo Fractional Realestate"
+                version="v1.0.0"
+                type="Fractional Ownership"
+                description="Debo opens Ethiopian real estate to everyday investors by splitting income-generating property into affordable fractional shares on-chain. Co-own buildings, follow rental yield transparently, and exit your position without the paperwork, capital barriers or intermediaries of the traditional property market."
+                stats={[
+                  { label: "Asset Class", val: "Real Estate" },
+                  { label: "Ownership", val: "Fractional" },
+                ]}
+                linkUrl="https://debo.endubis.io"
+                linkText="Launch Debo"
+                Icon={Building2}
+              />
+            </div>
           </div>
         </section>
 
@@ -560,7 +649,13 @@ export default function Home() {
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Atom className="w-6 h-6 text-[#D4A54F]" />
+                <Image
+                  src="/endubis-logo-mark.png"
+                  alt="Endubis Labs logo"
+                  width={400}
+                  height={624}
+                  className="h-7 w-auto"
+                />
                 <h2 className="text-2xl font-bold font-mono text-white">
                   ENDUBIS
                 </h2>

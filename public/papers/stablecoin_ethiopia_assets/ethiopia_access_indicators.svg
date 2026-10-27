@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 314" width="860" height="314" role="img" aria-label="Ethiopian 2024 access indicators: 48.83 percent of adults have an account, 21.94 percent of the population uses the internet, 65.08 mobile subscriptions per 100 people.">
+<style>text{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}.lbl{fill:#d4d4d8;font-size:15px}.val{fill:#fafafa;font-size:16px;font-weight:600}.unit{fill:#71717a;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.axis{stroke:#27272a;stroke-width:1}</style>
+<rect width="860" height="314" fill="none"/>
+<line class="axis" x1="330.0" y1="32" x2="330.0" y2="280"/>
+<text class="unit" x="330.0" y="298" text-anchor="middle">0%</text>
+<line class="axis" x1="425.0" y1="32" x2="425.0" y2="280"/>
+<text class="unit" x="425.0" y="298" text-anchor="middle">17%</text>
+<line class="axis" x1="520.0" y1="32" x2="520.0" y2="280"/>
+<text class="unit" x="520.0" y="298" text-anchor="middle">35%</text>
+<line class="axis" x1="615.0" y1="32" x2="615.0" y2="280"/>
+<text class="unit" x="615.0" y="298" text-anchor="middle">52%</text>
+<line class="axis" x1="710.0" y1="32" x2="710.0" y2="280"/>
+<text class="unit" x="710.0" y="298" text-anchor="middle">70%</text>
+<text class="lbl" x="314" y="83.0" text-anchor="end">Adults with an account (2024)</text>
+<rect x="330" y="58" width="380" height="40" rx="4" fill="#18181b"/>
+<rect x="330" y="58" width="265.1" height="40" rx="4" fill="#D4A54F"/>
+<text class="val" x="607.1" y="84.0">48.83</text>
+<text class="unit" x="663.1" y="84.0">% of adults</text>
+<text class="lbl" x="314" y="157.0" text-anchor="end">Individuals using the internet (2024)</text>
+<rect x="330" y="132" width="380" height="40" rx="4" fill="#18181b"/>
+<rect x="330" y="132" width="119.1" height="40" rx="4" fill="#D4A54F"/>
+<text class="val" x="461.1" y="158.0">21.94</text>
+<text class="unit" x="517.1" y="158.0">% of population</text>
+<text class="lbl" x="314" y="231.0" text-anchor="end">Mobile-cellular subscriptions (2024)</text>
+<rect x="330" y="206" width="380" height="40" rx="4" fill="#18181b"/>
+<rect x="330" y="206" width="353.3" height="40" rx="4" fill="#D4A54F"/>
+<text class="val" x="695.3" y="232.0">65.08</text>
+<text class="unit" x="751.3" y="232.0">per 100 people</text>
+</svg>

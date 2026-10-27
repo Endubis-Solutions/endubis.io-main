@@ -7,15 +7,15 @@ import { Suspense } from "react";
 import { Navbar } from "@/components/navigation";
 
 export const metadata: Metadata = {
-  title: "Endubis - Blockchain Solutions for Modern Finance",
+  title: "Endubis Labs: Experiments with AI and Blockchain",
   description:
     "Unlock the power of blockchain with Endubis. Secure lending, transparent escrow, and innovative wallet solutions for decentralized finance.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/endubis-icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: "/apple-icon.png",
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   generator: "v0.app",
 };
@@ -26,7 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <meta
           name="viewport"

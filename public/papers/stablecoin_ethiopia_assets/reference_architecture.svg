@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 606" width="920" height="606" role="img" aria-label="Reference architecture with five operational planes: access and identity, licensed wallet services, issuer control, blockchain settlement, existing payment rails; supporting planes cover reserves, NBE supervision, domestic data custody and an optional Midnight proof layer.">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52525b"/></marker></defs>
+<style>text{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}.t{fill:#fafafa;font-size:14px;font-weight:600}.ts{fill:#fafafa;font-size:13px;font-weight:600}.s{fill:#a1a1aa;font-size:11.5px}.ss{fill:#a1a1aa;font-size:10.5px}.a{fill:#D4A54F;font-size:11px;letter-spacing:.04em}.note{fill:#71717a;font-size:11.5px}</style>
+<rect x="32" y="24" width="620" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="t" x="46" y="49">1 · Access and identity</text>
+<text class="s" x="46" y="69">Customers, assisted agents, USSD and smartphone channels</text>
+<text class="s" x="46" y="85">Fayda identifiers and customer due diligence stay off-chain</text>
+<path d="M 78 98 L 78 126" stroke="#52525b" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="a" x="92" y="116.0">authenticated request</text>
+<rect x="32" y="126" width="620" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="t" x="46" y="151">2 · Licensed wallet services</text>
+<text class="s" x="46" y="171">Regulated wallet providers own customer relationships and support</text>
+<text class="s" x="46" y="187">Revocable policy credentials authorize participation</text>
+<path d="M 78 200 L 78 228" stroke="#52525b" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="a" x="92" y="218.0">funding / redemption instruction</text>
+<rect x="32" y="228" width="620" height="74" rx="8" fill="#16130d" stroke="#D4A54F"/>
+<text class="t" x="46" y="253">3 · Issuer control plane</text>
+<text class="s" x="46" y="273">Mint and burn approval, allowlisting, freeze, limits, dual control</text>
+<text class="s" x="46" y="289">HSM quorum, signed approvals, ledgers, daily reconciliation</text>
+<path d="M 78 302 L 78 330" stroke="#52525b" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="a" x="92" y="320.0">authorized state change</text>
+<rect x="32" y="330" width="620" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="t" x="46" y="355">4 · Blockchain settlement</text>
+<text class="s" x="46" y="375">Cardano native asset under CIP-113 transfer policy</text>
+<text class="s" x="46" y="391">Independent nodes, redundant indexers, signed checkpoints</text>
+<path d="M 78 404 L 78 432" stroke="#52525b" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+<text class="a" x="92" y="422.0">settlement reference</text>
+<rect x="32" y="432" width="620" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="t" x="46" y="457">5 · Existing payment rails</text>
+<text class="s" x="46" y="477">Banks, EthSwitch, instant payments, cash-in and cash-out agents</text>
+<text class="s" x="46" y="493">Reserve movements and customer settlement remain in ETB</text>
+<path d="M 652 163 L 664 163" stroke="#3f3f46" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="664" y="126" width="224" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="ts" x="678" y="151">Reserve banks &amp; custodians</text>
+<text class="ss" x="678" y="171">Segregated liquid ETB reserves,</text>
+<text class="ss" x="678" y="187">confirmations, assurance</text>
+<path d="M 652 265 L 664 265" stroke="#3f3f46" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="664" y="228" width="224" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="ts" x="678" y="253">NBE supervision</text>
+<text class="ss" x="678" y="273">Sandbox reporting, limits,</text>
+<text class="ss" x="678" y="289">incidents, intervention rights</text>
+<path d="M 652 367 L 664 367" stroke="#3f3f46" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="664" y="330" width="224" height="74" rx="8" fill="#111114" stroke="#2f2f36"/>
+<text class="ts" x="678" y="355">Domestic data custody</text>
+<text class="ss" x="678" y="375">PII, biometrics, accounts:</text>
+<text class="ss" x="678" y="391">residency, retention, access</text>
+<path d="M 652 469 L 664 469" stroke="#3f3f46" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="664" y="432" width="224" height="74" rx="8" fill="#111114" stroke="#2f2f36" stroke-dasharray="5 5"/>
+<text class="ts" x="678" y="457">Optional Midnight layer</text>
+<text class="ss" x="678" y="477">Selective-disclosure proofs</text>
+<text class="ss" x="678" y="493">for eligibility and limits</text>
+<text class="note" x="32" y="556">Trust boundary: only approved wallet providers and institutions may hold or transfer the token; policy credentials are revocable.</text>
+<text class="note" x="32" y="578">Public-chain data is limited to supply, pseudonymous addresses and policy references; identity data stays in the domestic vault.</text>
+</svg>

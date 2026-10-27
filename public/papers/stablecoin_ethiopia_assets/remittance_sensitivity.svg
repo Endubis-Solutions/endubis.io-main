@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img" aria-label="Illustrative gross annual remittance savings in US dollars millions: at 5 percent adoption 3.57 to 10.71 million; at 15 percent adoption 10.71 to 32.12 million; at 30 percent adoption 21.41 to 64.24 million.">
+<style>text{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}.lbl{fill:#d4d4d8;font-size:14px}.val{fill:#fafafa;font-size:12px;font-weight:600}.unit{fill:#71717a;font-size:12px;letter-spacing:.06em}.axis{stroke:#27272a;stroke-width:1}.glabel{fill:#a1a1aa;font-size:15px}</style>
+<line class="axis" x1="74" y1="336.0" x2="836" y2="336.0"/>
+<text class="unit" x="62" y="340.0" text-anchor="end">0</text>
+<line class="axis" x1="74" y1="274.8" x2="836" y2="274.8"/>
+<text class="unit" x="62" y="278.8" text-anchor="end">14</text>
+<line class="axis" x1="74" y1="213.6" x2="836" y2="213.6"/>
+<text class="unit" x="62" y="217.6" text-anchor="end">28</text>
+<line class="axis" x1="74" y1="152.4" x2="836" y2="152.4"/>
+<text class="unit" x="62" y="156.4" text-anchor="end">42</text>
+<line class="axis" x1="74" y1="91.2" x2="836" y2="91.2"/>
+<text class="unit" x="62" y="95.2" text-anchor="end">56</text>
+<line class="axis" x1="74" y1="30.0" x2="836" y2="30.0"/>
+<text class="unit" x="62" y="34.0" text-anchor="end">70</text>
+<rect x="114.6" y="320.4" width="55.9" height="15.6" rx="3" fill="#8a6a2f"/>
+<text class="val" x="142.6" y="312.4" text-anchor="middle">3.57</text>
+<rect x="181.9" y="304.8" width="55.9" height="31.2" rx="3" fill="#D4A54F"/>
+<text class="val" x="209.9" y="296.8" text-anchor="middle">7.14</text>
+<rect x="249.3" y="289.2" width="55.9" height="46.8" rx="3" fill="#f0cf8a"/>
+<text class="val" x="277.2" y="281.2" text-anchor="middle">10.71</text>
+<text class="glabel" x="201.0" y="362.0" text-anchor="middle">5% of reported inflow</text>
+<rect x="368.6" y="289.2" width="55.9" height="46.8" rx="3" fill="#8a6a2f"/>
+<text class="val" x="396.6" y="281.2" text-anchor="middle">10.71</text>
+<rect x="435.9" y="242.4" width="55.9" height="93.6" rx="3" fill="#D4A54F"/>
+<text class="val" x="463.9" y="234.4" text-anchor="middle">21.41</text>
+<rect x="503.3" y="195.6" width="55.9" height="140.4" rx="3" fill="#f0cf8a"/>
+<text class="val" x="531.2" y="187.6" text-anchor="middle">32.12</text>
+<text class="glabel" x="455.0" y="362.0" text-anchor="middle">15% of reported inflow</text>
+<rect x="622.6" y="242.4" width="55.9" height="93.6" rx="3" fill="#8a6a2f"/>
+<text class="val" x="650.6" y="234.4" text-anchor="middle">21.41</text>
+<rect x="690.0" y="148.8" width="55.9" height="187.2" rx="3" fill="#D4A54F"/>
+<text class="val" x="717.9" y="140.8" text-anchor="middle">42.83</text>
+<rect x="757.3" y="55.2" width="55.9" height="280.8" rx="3" fill="#f0cf8a"/>
+<text class="val" x="785.2" y="47.2" text-anchor="middle">64.24</text>
+<text class="glabel" x="709.0" y="362.0" text-anchor="middle">30% of reported inflow</text>
+<rect x="74" y="382" width="12" height="12" rx="2" fill="#8a6a2f"/>
+<text class="lbl" x="93" y="393">1 pp cost reduction</text>
+<rect x="284" y="382" width="12" height="12" rx="2" fill="#D4A54F"/>
+<text class="lbl" x="303" y="393">2 pp cost reduction</text>
+<rect x="494" y="382" width="12" height="12" rx="2" fill="#f0cf8a"/>
+<text class="lbl" x="513" y="393">3 pp cost reduction</text>
+<text class="unit" x="836" y="393" text-anchor="end">US$ millions per year</text>
+</svg>
